@@ -1,0 +1,24 @@
+print("Ingrese valores enteros (terminará cuando ingrese '0')")
+positivos = 0
+negativos = 0
+resultados_positivos = "positivos: "
+resultados_negativos = "negativos: "
+
+while True:
+    valor = int(input())
+    
+    if valor > 0:
+        positivos += 1
+    elif valor < 0:
+        negativos += 1
+    elif valor == 0:
+        break
+
+for i in range(positivos):
+    resultados_positivos += "*"
+
+for i in range(negativos):
+    resultados_negativos += "*"
+
+print(resultados_positivos)
+print(resultados_negativos)
