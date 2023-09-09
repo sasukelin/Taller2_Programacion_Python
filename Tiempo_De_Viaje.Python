@@ -1,0 +1,17 @@
+print("¿Cuántos tramos de viaje realizó?")
+tramos = int(input())
+duracion = []
+
+suma = 0
+for i in range(tramos):
+    print(f"Duración del tramo {i + 1}: ", end="")
+    duracion.append(int(input()))
+    suma += duracion[i]
+
+horas = suma // 60
+minutos = suma % 60
+
+if minutos >= 10:
+    print(f"El tiempo total de viaje: {horas}:{minutos} horas")
+else:
+    print(f"El tiempo total de viaje: {horas}:0{minutos} horas")
