@@ -1,0 +1,18 @@
+print("¿Cuántos valores ingresará?")
+valores = int(input())
+valor = []
+
+for i in range(valores):
+    print(f"Ingrese el valor {i + 1}: ", end="")
+    valor.append(int(input()))
+
+mayor = menor = valor[0]
+
+for val in valor:
+    if val > mayor:
+        mayor = val
+    if val < menor:
+        menor = val
+
+rango = mayor - menor
+print("El rango es:", rango)
